@@ -12,4 +12,44 @@
         <%= danger %>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    <% } %>
+<% } %>
+
+<% if(warning && warning.length) {%>
+
+    <div class="alert alert-warning alert-dismissable fade show" role="alert">
+        <%= warning %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+
+<% if(info && info.length) {%>
+
+    <div class="alert alert-info alert-dismissable fade show" role="alert">
+        <%= info %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+
+<% if(error && error.length) {%>
+
+    <div class="alert alert-danger alert-dismissable fade show" role="alert">
+        <ul>
+            <% error.forEach(function(error) { %>
+                <li><%= error %></li>
+            <% }) %>
+        </ul>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+
+<% if(message && message.length) {%>
+
+    <div class="alert alert-info alert-dismissable fade show" role="alert">
+        <ul>
+            <% message.forEach(function(message) { %>
+                <li><%= message %></li>
+            <% }) %>
+        </ul>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
