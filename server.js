@@ -10,9 +10,11 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/user');
 
+const userRoutes = require('./routes/users');
+const campgroundRoutes = require('./routes/campgrounds');
+const reviewRoutes = require('./routes/reviews');
 
-const campgrounds = require('./routes/campgrounds');
-const reviews = require('./routes/reviews');
+
 
 // mongoose connection
 main().catch(err => console.log(err));
@@ -64,14 +66,15 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get ('/fakeUser', async (req, res) => {
-    const user = new User({email: 'colt@gmail.com', username: 'colt'});
-    const newUser = await User.register(user, 'chicken');
-    res.send(newUser);
-});
+// app.get ('/fakeUser', async (req, res) => {
+//     const user = new User({email: 'colt@gmail.com', username: 'colt'});
+//     const newUser = await User.register(user, 'chicken');
+//     res.send(newUser);
+// });
 
-app.use('/campgrounds', campgrounds);
-app.use('/campgrounds/:id/reviews', reviews);
+app.use('/', userRoutes);
+app.use('/campgrounds', campgroundRoutes);
+app.use('/campgrounds/:id/reviews', reviewRoutes);
 
 // INDEX
 
