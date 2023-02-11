@@ -2,7 +2,8 @@ if(process.env.NODE_ENV !== "production") {
     require('dotenv').config();
 };
 
-console.log(process.env.SECRET);
+
+console.log('dev mode = ', process.env.NODE_ENV !== "production");
 
 const express = require('express');
 const path = require('path');
