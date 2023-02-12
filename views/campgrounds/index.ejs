@@ -8,7 +8,9 @@
             <div class="card">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src=" <%= campground.image %>  " alt="" class="img-fluid">
+                        <% for(let img of campground.images) { %>
+                            <img src="<%= img.url %>" class="card-img-top" alt="...">   
+                            <% } %>
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
