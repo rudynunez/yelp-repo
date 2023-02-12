@@ -8,16 +8,7 @@
             <div class="card">
                 <div class="row">
                     <div class="col-md-4">
-                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <% campground.images.forEach((img, i) => { %>
-                                <div class="carousel-item active">
-                                    <img src="<%= img.url %>" class="d-block w-100" alt="...">
-                                </div>
-                                <% }) %>
-                            </div>
-
-                          </div>
+                        <img src=" <%= campground.images[0].url %>  " alt="" class="img-fluid">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
