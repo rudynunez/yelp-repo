@@ -24,12 +24,13 @@ const userRoutes = require('./routes/users');
 const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
 
+// Atlas connection: 
+// const dbUrl = process.env.DB_URL
 
-
-// mongoose connection
+// mongoose connection             
 main().catch(err => console.log(err));
 async function main() {
-    await mongoose.connect('mongodb://localhost:27017/yelp-camp');
+    await mongoose.connect('mongodb://localhost:27017/yelp-camp');  //localhost connection:  'mongodb://localhost:27017/yelp-camp'
     console.log('Mongoose CONNECTED');
 };
 
