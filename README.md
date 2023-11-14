@@ -20,4 +20,4 @@ Mongodb was problematic to install. Here are links which helped me:
     for removal:
         https://stackoverflow.com/questions/62495999/installing-mongodb-in-wsl
 
-    
+    11/13/2023 - Could not configure helmet because Colt did not provide code snippet. in lesson #584, minute 3:25
