@@ -27,7 +27,7 @@ const reviewRoutes = require('./routes/reviews');
 
 
 
-const dbUrl = 'mongodb://localhost:27017/yelp-camp'
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp'
 
 // Atlas connection: 
 // const dbUrl = process.env.DB_URL
@@ -53,11 +53,13 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(mongoSanitize());
 
+const secret = process.env.SECRET || 'this-secret';
+
 const store = MongoDBStore.create({
     mongoUrl: dbUrl,
     touchAfter: 24 * 60 * 60,
     crypto: {
-        secret: 'this-secret'
+        secret,
     }
 });
 
@@ -68,7 +70,7 @@ store.on("error", function(e){
 const sessionConfig = {
     store,
     name: 'yelp-sesh',
-    secret: 'this-secret',
+    secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
