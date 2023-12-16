@@ -35,7 +35,7 @@ const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp'
 // mongoose connection             
 main().catch(err => console.log(err));
 async function main() {
-    await mongoose.connect(dbUrl);  //localhost connection:  'mongodb://localhost:27017/yelp-camp'
+    await mongoose.connect(dbUrl);  //localhost connection:  'mongodb://localhost:27017/yelp-camp' // remote connection: dbUrl
     console.log('Mongoose CONNECTED');
 };
 
