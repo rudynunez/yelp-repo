@@ -1,6 +1,6 @@
-### DON'T FORGET YOUR .ENV FILE!!! ###
+# DON'T FORGET YOUR .ENV FILE!!! ###
 
-## Other things to remember ##
+### Other things to remember ##
 
 The following are my notes on how this stack is set up.
 
