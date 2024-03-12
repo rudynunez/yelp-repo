@@ -1,4 +1,4 @@
-### Day 1 Yelp Camp ###
+### DON'T FORGET YOUR .ENV FILE!!! ###
 
 The following are my notes on how this stack is set up.
 
