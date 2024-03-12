@@ -2,9 +2,7 @@
 
 ### Other things to remember ##
 
-The following are my notes on how this stack is set up.
-
-Note that this is a complete rebuilding of the backend since installing a new copy of Windows 10.  Since that time Mongodb has deprecated the "mongo" command and replaced it with "mongosh"
+Mongodb has deprecated the "mongo" command and replaced it with "mongosh"
 
 WSL2 Ubuntu 20.04 (Focal)
 
